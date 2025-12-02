@@ -1,0 +1,98 @@
+4. Market de Diseños para Impresión Bajo Demanda con IA
+Idea: Plataforma donde artistas crean y venden diseños generados (o inspirados) por IA, para imprimir en camisetas, posters, fundas, etc., sin tener stock.
+
+🎯 Nicho: Artistas digitales, diseñadores, personas que buscan arte único.
+💡 Diferencial: Estilo IA curado + catálogo personalizable por el cliente.
+✅ Yo te puedo ayudar: A generar los primeros diseños, montar una tienda (Shopify, Etsy, WooCommerce) y conectar con plataformas como Printful o Gelato.
+
+
+
+5. Asistente de Diseño para Emprendedores Cristianos (Nicho Religioso)
+Idea: Herramienta o estudio digital que ayuda a emprendedores cristianos a crear branding, redes sociales, flyers y logos basados en valores cristianos, pasajes bíblicos y una estética moderna.
+
+🎯 Nicho: Iglesias, ministerios juveniles, marcas cristianas.
+💡 Diferencial: Inspiración bíblica + diseño moderno + uso de IA para generar ideas visuales únicas.
+✅ Yo puedo ayudarte: A generar contenido visual, textos bíblicos adaptados, automatizar calendarios de contenido, y branding completo.
+
+
+ Generador de Oraciones Visuales y Devocionales para Redes
+Idea: Plataforma que genera gráficos hermosos con versículos bíblicos, frases cristianas o devocionales personalizados, para que usuarios los descarguen o publiquen.
+
+🎯 Nicho: Jóvenes cristianos, iglesias, influencers de fe.
+💡 ¿Por qué es nueva?: Casi nadie automatiza esto con diseño de calidad.
+✅ Yo te puedo ayudar: A conectar IA para texto, imágenes y estilo visual bíblico + plantillas para redes.
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cuestionario Bíblico</title>
+<style>
+body {
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  background: #020617;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background: #1e293b;
+  color: white;
+}
+.correct { background: #16a34a; }
+.wrong { background: #dc2626; }
+#result { margin-top: 15px; font-size: 18px; display:none; }
+#retry { display:none; background:#2563eb; }
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h2>📖 Cuestionario Bíblico</h2>
+
+  <p>Según Mateo 5:16 ¿para qué debe alumbrar nuestra luz?</p>
+
+  <button onclick="answer(this,false)">Que nos reconozcan</button>
+  <button onclick="answer(this,false)">Lograr éxito personal</button>
+  <button onclick="answer(this,true)">Glorificar a Dios</button>
+
+  <div id="result"></div>
+  <button id="retry" onclick="location.reload()">🔁 Reintentar</button>
+</div>
+
+<script>
+let done = false;
+function answer(btn, ok){
+  if(done) return;
+  done = true;
+  if(ok){
+    btn.className="correct";
+    result.innerHTML="🎉 ¡FELICIDADES!";
+  } else {
+    btn.className="wrong";
+    result.innerHTML="❌ Intentá de nuevo";
+    retry.style.display="block";
+  }
+  result.style.display="block";
+}
+</script>
+</body>
+</html>
+
